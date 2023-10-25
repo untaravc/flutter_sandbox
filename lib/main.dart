@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/tutorial/date_widget.dart';
-import 'package:flutter_application_1/pages/tutorial/tab_bar_widget.dart';
+import 'package:flutter_application_1/pages/tutorial/dialog.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: TabBarWidget(),
+      home: DialogWidget(),
     );
   }
 }
