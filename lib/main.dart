@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/tutorial/home_page.dart';
 import 'package:flutter_application_1/pages/tutorial/photo_page.dart';
+import 'package:flutter_application_1/pages/tutorial/product_list.dart';
 import 'package:flutter_application_1/pages/tutorial/profile_page.dart';
 
 void main() {
@@ -14,8 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: HomePage.nameRoute,
+      initialRoute: ProductList.nameRoute,
       routes: {
+        ProductList.nameRoute: (context) => const ProductList(),
         HomePage.nameRoute: (context) => HomePage(),
         ProfilePage.nameRoute: (context) => const ProfilePage(),
         PhotoPage.nameRoute: (context) => const PhotoPage(),
