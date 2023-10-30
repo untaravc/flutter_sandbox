@@ -13,7 +13,7 @@ class _CounterWidgetState extends State<CounterWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Counter")),
+      appBar: AppBar(title: const Text("Counter")),
       body: Column(children: [
         Text(counter.toString()),
         Row(

@@ -93,9 +93,9 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 SquareTile(imagePath: 'lib/images/google-logo.png'),
                 SizedBox(
                   width: 10,
@@ -106,9 +106,9 @@ class LoginPage extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Text("Not a member?"),
                 SizedBox(
                   width: 4,

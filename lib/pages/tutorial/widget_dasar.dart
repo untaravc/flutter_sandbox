@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WidgetDasar extends StatelessWidget {
-  WidgetDasar({super.key});
+  const WidgetDasar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class WidgetDasar extends StatelessWidget {
               itemBuilder: (context, index) {
                 // return const Image(image: AssetImage("images/woman.png"));
                 return const Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(20),
                   child: ImageCard(
                     imageLink:
                         "https://cdn.pixabay.com/photo/2023/09/13/00/40/ai-generated-8249824_1280.jpg",
@@ -40,10 +40,10 @@ class ImageCard extends StatelessWidget {
       children: [
         Image.network(imageLink),
         Container(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: Text(
               description,
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ))
       ],
     );

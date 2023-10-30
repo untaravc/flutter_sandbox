@@ -18,7 +18,7 @@ class BlocStateManagement extends StatelessWidget {
           stream: countStream(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(
+              return const Center(
                 child: Text(
                   "Loading...",
                   style: TextStyle(fontSize: 50),

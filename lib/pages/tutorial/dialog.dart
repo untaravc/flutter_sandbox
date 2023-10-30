@@ -23,7 +23,7 @@ class _DialogWidgetState extends State<DialogWidget> {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  title: Text("Dihapus?"),
+                  title: const Text("Dihapus?"),
                   actions: [
                     TextButton(
                         onPressed: () {
@@ -32,7 +32,7 @@ class _DialogWidgetState extends State<DialogWidget> {
                           });
                           Navigator.of(context).pop(false);
                         },
-                        child: Text("Ya")),
+                        child: const Text("Ya")),
                     TextButton(
                         onPressed: () {
                           setState(() {
@@ -40,10 +40,10 @@ class _DialogWidgetState extends State<DialogWidget> {
                           });
                           Navigator.of(context).pop(true);
                         },
-                        child: Text("Tidak")),
+                        child: const Text("Tidak")),
                   ],
                 );
-              }).then((value) => {print(value)});
+              }).then((value) => {});
         },
         child: const Icon(Icons.delete),
       ),

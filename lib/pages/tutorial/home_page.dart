@@ -4,7 +4,7 @@ import 'package:flutter_application_1/pages/tutorial/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   static const nameRoute = '/home_page';
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();

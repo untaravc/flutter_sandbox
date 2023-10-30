@@ -17,7 +17,6 @@ class AddBlocBuilder extends StatelessWidget {
         BlocConsumer<Counter, int>(
           bloc: mycounter,
           builder: (context, state) {
-            print(state);
             return Text("$state");
           },
           listenWhen: (previous, current) {

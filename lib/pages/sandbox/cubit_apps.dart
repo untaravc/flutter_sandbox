@@ -60,7 +60,6 @@ class CounterCubit extends Cubit<int> {
 
   @override
   void onChange(Change<int> change) {
-    // TODO: implement onChange
     super.onChange(change);
     current = change.currentState;
     next = change.nextState;
@@ -68,8 +67,6 @@ class CounterCubit extends Cubit<int> {
 
   @override
   void onError(Object error, StackTrace stackTrace) {
-    // TODO: implement onError
     super.onError(error, stackTrace);
-    print(error);
   }
 }

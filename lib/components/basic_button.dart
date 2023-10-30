@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BasicButton extends StatelessWidget {
-  BasicButton({super.key, this.onTab});
+  const BasicButton({super.key, this.onTab});
 
   final Function()? onTab;
 
@@ -11,7 +11,7 @@ class BasicButton extends StatelessWidget {
       onTap: onTab,
       child: Container(
         padding: const EdgeInsets.all(25),
-        margin: EdgeInsets.symmetric(horizontal: 25),
+        margin: const EdgeInsets.symmetric(horizontal: 25),
         decoration: BoxDecoration(
             color: Colors.black, borderRadius: BorderRadius.circular(8)),
         child: const Center(

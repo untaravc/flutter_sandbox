@@ -34,7 +34,6 @@ class _HomePageState extends State<HomePage> {
 
   void fetchUsers() async {
     const url = "https://jsonplaceholder.typicode.com/posts";
-    print("fetch URL $url");
 
     final uri = Uri.parse(url);
     final response = await http.get(uri);
@@ -44,7 +43,5 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       dataFetch = json;
     });
-
-    print("Finish fetch URL $url");
   }
 }

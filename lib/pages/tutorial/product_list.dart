@@ -32,7 +32,7 @@ class _ProductListState extends State<ProductList> {
       appBar: AppBar(title: const Text("Product List")),
       body: GridView.builder(
         gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (context, index) {
           return GridTile(
             child: Image.network(productList[index].imageUrl),

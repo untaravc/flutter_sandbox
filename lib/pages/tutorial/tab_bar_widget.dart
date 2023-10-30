@@ -29,8 +29,8 @@ class _TabBarWidgetState extends State<TabBarWidget> {
       length: topTabList.length,
       initialIndex: 2,
       child: Scaffold(
-        appBar:
-            AppBar(title: Text("Tab barr"), bottom: TabBar(tabs: topTabList)),
+        appBar: AppBar(
+            title: const Text("Tab barr"), bottom: TabBar(tabs: topTabList)),
         body: const TabBarView(children: [
           Center(
             child: Text("Content 1"),

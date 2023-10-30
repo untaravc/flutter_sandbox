@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       initialRoute: ProductList.nameRoute,
       routes: {
         ProductList.nameRoute: (context) => const ProductList(),
-        HomePage.nameRoute: (context) => HomePage(),
+        HomePage.nameRoute: (context) => const HomePage(),
         ProfilePage.nameRoute: (context) => const ProfilePage(),
         PhotoPage.nameRoute: (context) => const PhotoPage(),
       },
