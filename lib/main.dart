@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_1/pages/tutorial/home_page.dart';
+import 'package:flutter_application_1/pages/tutorial/layout_builder_page.dart';
 import 'package:flutter_application_1/pages/tutorial/media_query_page.dart';
 import 'package:flutter_application_1/pages/tutorial/photo_page.dart';
 import 'package:flutter_application_1/pages/tutorial/product_list.dart';
@@ -24,8 +25,9 @@ class MyApp extends StatelessWidget {
         // visualDensity: VisualDensity.compact,
         // primaryColor: Color.fromARGB(255, 80, 221, 41)
       ),
-      initialRoute: MediaQueryPage.nameRoute,
+      initialRoute: LayoutBuilderPage.nameRoute,
       routes: {
+        LayoutBuilderPage.nameRoute: (context) => const LayoutBuilderPage(),
         MediaQueryPage.nameRoute: (context) => const MediaQueryPage(),
         ProductList.nameRoute: (context) => const ProductList(),
         HomePage.nameRoute: (context) => const HomePage(),
