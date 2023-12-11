@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_application_1/pages/tutorial/home_page.dart';
-import 'package:flutter_application_1/pages/tutorial/layout_builder_page.dart';
-import 'package:flutter_application_1/pages/tutorial/media_query_page.dart';
-import 'package:flutter_application_1/pages/tutorial/photo_page.dart';
-import 'package:flutter_application_1/pages/tutorial/product_list.dart';
-import 'package:flutter_application_1/pages/tutorial/profile_page.dart';
+import 'package:flutter_application_1/model/http_provider.dart';
+import 'package:flutter_application_1/pages/tutorial/http_provider_page.dart';
+import 'package:flutter_application_1/pages/tutorial/user_list.dart';
+import 'package:flutter_application_1/provider/user_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,14 +24,16 @@ class MyApp extends StatelessWidget {
         // visualDensity: VisualDensity.compact,
         // primaryColor: Color.fromARGB(255, 80, 221, 41)
       ),
-      initialRoute: LayoutBuilderPage.nameRoute,
+      home: ChangeNotifierProvider(
+        create: (context) => HttpProvider(),
+        child: HttpProviderPage(),
+      ),
+      initialRoute: HttpProviderPage.nameRoute,
       routes: {
-        LayoutBuilderPage.nameRoute: (context) => const LayoutBuilderPage(),
-        MediaQueryPage.nameRoute: (context) => const MediaQueryPage(),
-        ProductList.nameRoute: (context) => const ProductList(),
-        HomePage.nameRoute: (context) => const HomePage(),
-        ProfilePage.nameRoute: (context) => const ProfilePage(),
-        PhotoPage.nameRoute: (context) => const PhotoPage(),
+        HttpProviderPage.nameRoute: (context) => ChangeNotifierProvider(
+              create: (context) => UserProvider(),
+              child: UserList(),
+            ),
       },
     );
   }
